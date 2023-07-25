@@ -23,4 +23,5 @@ public class ClubController {
         model.addAttribute("footballClubs", footballClub);
         return "index";
     }
+
 }
