@@ -2,9 +2,8 @@ package com.example.footballmanagement.entity;
 
 import java.util.Date;
 
+import javax.persistence.Column;
 import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Table;
 
@@ -20,16 +19,27 @@ import lombok.Setter;
 @AllArgsConstructor
 @Entity
 @Data
-@Table(name = "DUCTRAM_FOOTBALL_PLAYER", schema = "ACME")
+@Table(name = "TRAINING_PLAYER", schema = "ACME")
 public class Player {
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long id;
+    @Column(name = "PK_PLAYER_ID")
+    private Integer id;
 
+    @Column(name = "PLAYER_NAME")
     private String name;
+
+    @Column(name = "DOB")
     private Date dob;
+
+    @Column(name = "NATION")
     private String nation;
-    private int height;
-    private boolean isLeftFooted;
-    private boolean isRightFooted;
+
+    @Column(name = "HEIGHT")
+    private Integer height;
+
+    @Column(name = "FOOT")
+    private String foot;
+
+    @Column(name = "FK_CLUB_ID")
+    private String club;
 }
