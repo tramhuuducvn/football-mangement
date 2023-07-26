@@ -1,14 +1,9 @@
-package com.example.footballmanagement.entity;
+package com.example.footballmanagement.payload.response;
 
 import java.util.Date;
 
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.Id;
-import javax.persistence.Table;
-
 import lombok.AllArgsConstructor;
-import lombok.Data;
+import lombok.Builder;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
@@ -17,30 +12,20 @@ import lombok.Setter;
 @Setter
 @NoArgsConstructor
 @AllArgsConstructor
-@Entity
-@Data
-@Table(name = "TRAINING_PLAYER", schema = "ACME")
-public class Player {
-    @Id
-    @Column(name = "PK_PLAYER_ID")
+@Builder
+public class PlayerResponse {
     private Integer id;
 
-    @Column(name = "PLAYER_NAME")
     private String name;
 
-    @Column(name = "DOB")
     private Date dob;
 
-    @Column(name = "NATION")
     private String nation;
 
-    @Column(name = "HEIGHT")
     private Integer height;
 
-    @Column(name = "FOOT")
     private String foot;
 
-    @Column(name = "FK_CLUB_ID")
     private String club;
 
     @Override

@@ -12,7 +12,7 @@ import com.example.footballmanagement.payload.response.ClubResponse;
 import com.example.footballmanagement.service.ClubService;
 
 @Controller
-@RequestMapping("/football-club")
+@RequestMapping("/club")
 public class ClubController {
     @Autowired
     ClubService footballClubService;
